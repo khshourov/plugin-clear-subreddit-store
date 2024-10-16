@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "Hide Recent Subreddits Store",
+    "version": "1.0",
+
+    "description": "Hide recent subreddits section from reddit.com",
+
+    "icons": {
+        "48": "icons/hrs-48.png",
+        "96": "icons/hrs-96.png"
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["https://www.reddit.com/*"],
+            "js": ["hide-recent-subreddits.js"]
+        }
+    ],
+
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "plugin-hide-recent-subreddits.shourov.kamrul@gmail.com"
+        }
+    }
+}
