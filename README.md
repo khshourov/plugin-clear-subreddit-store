@@ -1,0 +1,1 @@
+# plugin-clear-subreddit-store
