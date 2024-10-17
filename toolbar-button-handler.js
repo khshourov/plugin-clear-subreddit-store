@@ -6,6 +6,19 @@ browser.runtime.onInstalled.addListener(async () => {
     }
 });
 
+browser.tabs.onUpdated.addListener(async (tabId, changeInfo) => {
+    const storage = await browser.storage.local.get('visibility');
+    const updatedVisibility = storage.visibility;
+    await browser.pageAction.setIcon({
+        tabId: tabId,
+        path: {
+            16: `icons/toolbar/${updatedVisibility}/hrs-16.png`,
+            32: `icons/toolbar/${updatedVisibility}/hrs-32.png`,
+            64: `icons/toolbar/${updatedVisibility}/hrs-64.png`,
+        },
+    });
+}, { urls: ["https://www.reddit.com/*"] })
+
 browser.pageAction.onClicked.addListener(async (tab) => {
     try {
         const storage = await browser.storage.local.get('visibility');

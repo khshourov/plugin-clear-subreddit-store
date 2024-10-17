@@ -24,7 +24,8 @@
     "background": {
         "scripts": [
             "toolbar-button-handler.js"
-        ]
+        ],
+        "type": "module"
     },
     
     "content_scripts": [
