@@ -1,8 +1,5 @@
 (function() {
     function getRedditRecentPagesElement() {
-        const MAX_RETRIES = 5;
-        const INTERVAL = 100;
-
         let retries = 0;
 
         return new Promise((resolve, _) => {
@@ -10,9 +7,9 @@
                 const element = document.querySelector('reddit-recent-pages');
                 if (element) {
                     resolve(element);
-                } else if (retries < MAX_RETRIES) {
+                } else if (retries < 5) {
                     retries = retries + 1;
-                    setTimeout(findElement, INTERVAL);
+                    setTimeout(findElement, 100);
                 } else {
                     resolve(null);
                 }
@@ -22,11 +19,25 @@
         })
     }
 
-    window.addEventListener('load', async function() {
+    async function updateVisibility() {
         const redditRecentPages = await getRedditRecentPagesElement();
         if (redditRecentPages) {
-            redditRecentPages.style.visibility = 'hidden';
-            redditRecentPages.style.display = 'none';
+            const storage = await browser.storage.local.get('visibility');
+            if (storage.visibility === 'visible') {
+                redditRecentPages.style.removeProperty('visibility');
+                redditRecentPages.style.removeProperty('display');
+            } else {
+                redditRecentPages.style.visibility = 'hidden';
+                redditRecentPages.style.display = 'none';
+            }
         }
+    }
+
+    window.addEventListener('load', async function() {
+        await updateVisibility();
+    });
+
+    browser.storage.onChanged.addListener(async () => {
+        await updateVisibility();
     });
 })();

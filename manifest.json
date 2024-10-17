@@ -4,12 +4,29 @@
     "version": "1.0",
 
     "description": "Hide recent subreddits section from reddit.com",
+    "homepage_url": "https://github.com/khshourov/plugin-hide-recent-subreddits",
 
     "icons": {
         "48": "icons/hrs-48.png",
         "96": "icons/hrs-96.png"
     },
 
+    "page_action": {
+        "default_icon": {
+            "16": "icons/toolbar/hidden/hrs-16.png",
+            "32": "icons/toolbar/hidden/hrs-32.png",
+            "64": "icons/toolbar/hidden/hrs-64.png"
+        },
+        "default_title": "Hide recent subreddits!",
+        "show_matches": ["https://www.reddit.com/*"]
+    },
+
+    "background": {
+        "scripts": [
+            "toolbar-button-handler.js"
+        ]
+    },
+    
     "content_scripts": [
         {
             "matches": ["https://www.reddit.com/*"],
