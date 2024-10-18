@@ -1,0 +1,19 @@
+{
+    "version": { "license": "MIT" },
+    "categories": { "firefox": ["appearance", "privacy-security"] },
+    "contributions_url": "https://donate.mozilla.org",
+    "homepage": {
+        "en-US": "https://github.com/khshourov/plugin-hide-recent-subreddits"
+    },
+    "name": {
+        "en-US": "Hide Recent Subreddits Store"
+    },
+    "requires_payment": false,
+    "summary": {
+        "en-US": "Hide the 'Recent Subreddits' section to avoid potential embarrassment in case you accidentally visit any NSFW subreddits!"
+    },
+    "support_email": {
+        "en-US": "shourov.kamrul@gmail.com"
+    },
+    "tags": ["reddit"]
+}
