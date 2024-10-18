@@ -56,6 +56,17 @@ Go to [Firefox addons store](https://addons.mozilla.org/en-US/firefox/addon/hide
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+<!-- Set up development environment -->
+## Set up development environment
+
+To test the plugin, you have two options:
+
+1.	In the Firefox URL bar, type about:debugging, click on “This Firefox,” then select “Load Temporary Add-on…” and choose any file from the plugin directory.
+2.	Use the web-ext command-line tool, which opens a separate Firefox window for testing. It automatically reloads when file changes occur and can also be used for building and publishing the plugin.
+
+Learn more about these approaches in [about:debugging](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension#installing) and [web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
 ## License
