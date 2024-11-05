@@ -27,7 +27,7 @@
         ],
         "type": "module"
     },
-    
+
     "content_scripts": [
         {
             "matches": ["https://www.reddit.com/*"],

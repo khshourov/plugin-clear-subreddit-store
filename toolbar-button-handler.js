@@ -6,7 +6,7 @@ browser.runtime.onInstalled.addListener(async () => {
     }
 });
 
-browser.tabs.onUpdated.addListener(async (tabId, changeInfo) => {
+browser.tabs.onUpdated.addListener(async (tabId, _changeInfo) => {
     const storage = await browser.storage.local.get('visibility');
     const updatedVisibility = storage.visibility;
     await browser.pageAction.setIcon({
@@ -19,7 +19,7 @@ browser.tabs.onUpdated.addListener(async (tabId, changeInfo) => {
     });
 }, { urls: ["https://www.reddit.com/*"] })
 
-browser.pageAction.onClicked.addListener(async (tab) => {
+browser.pageAction.onClicked.addListener(async (_tab) => {
     try {
         const storage = await browser.storage.local.get('visibility');
         const updatedVisibility = storage.visibility === 'hidden' ? 'visible' : 'hidden';
