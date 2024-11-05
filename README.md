@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/khshourov/plugin-hide-recent-subreddits">
-    <img src="icons/toolbar/visible/hrs-64.png" alt="Logo" width="80" height="80">
+    <img src="icons/hrs-96.png" alt="Logo" width="96" height="96">
   </a>
 
 <h3 align="center">Plugin - Hide recent subreddits</h3>
@@ -82,7 +82,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Kamrul H. Shourov - shourov.kamrul@gmail.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/khshourov/plugin-hide-recent-subreddits)
+Project Link: [https://github.com/khshourov/plugin-hide-recent-subreddits](https://github.com/khshourov/plugin-hide-recent-subreddits)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -92,6 +92,7 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 ## Acknowledgments
 
 * [Reddit icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/reddit)
+* [Reddit icons created by riajulislam - Flaticon](https://www.flaticon.com/free-icons/reddit)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
